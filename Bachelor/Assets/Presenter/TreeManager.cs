@@ -1,15 +1,12 @@
-using UnityEngine;
-using UnityEngine.EventSystems;
-
 namespace DefaultNamespace;
 
-public class TreeManager : MonoBehaviour, ITreeManager
+public class TreeManager : ITreeManager
 {
     public IRedBlackTree RedBlackTree { get; set; }
 
-    void Awake()
+    public TreeManager(IRedBlackTree redBlackTree)
     {
-        // MonoBehaviour classes cannot have constructors, so this is a good place to initialize anything that would normally be done in a constructor.
+        RedBlackTree = redBlackTree;
     }
 
     public void WaitForRotateRight()
