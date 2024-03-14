@@ -2,7 +2,7 @@ namespace DefaultNamespace;
 
 public interface IGameManager
 {
-    public GetCurrentIngredient();
-    public PlaceIngredient();
-    public PlacePlacementCircles();
+    public Node InGetCurrentIngredient();
+    public void PlaceIngredient();
+    public void PlacePlacementCircles();
 }

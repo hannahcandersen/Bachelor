@@ -1,11 +1,15 @@
+using UnityEngine;
+using UnityEngine.EventSystems;
+
 namespace DefaultNamespace;
 
-public class LevelManager : ILevelManager
+public class LevelManager : MonoBehaviour, ILevelManager
 {
     public List<ILevelData> Levels { get; set; } = new List<ILevelData>();
 
-    public LevelManager()
+    void Awake()
     {
+        // MonoBehaviour classes cannot have constructors, so this is a good place to initialize anything that would normally be done in a constructor.
     }
 
     public void LoadLevel(int levelIndex)
@@ -23,4 +27,5 @@ public class LevelManager : ILevelManager
     private void SaveProgress()
     {
     }
+    
 }

@@ -1,23 +1,26 @@
+using UnityEngine;
+using UnityEngine.EventSystems;
+
 namespace DefaultNamespace;
 
-public class GameManager : IGameManager
+public class GameManager : MonoBehaviour, IGameManager
 {
     public ILevelData LevelData { get; set; } // Info on the current level
 
-    public GameManager(ILevelData levelData)
+    void Awake()
     {
-        LevelData = levelData;
+        // MonoBehaviour classes cannot have constructors, so this is a good place to initialize anything that would normally be done in a constructor.
     }
 
-    public GetCurrentIngredient()
-    {
-    }
-
-    public PlaceIngredient()
+    public Node GetCurrentIngredient()
     {
     }
 
-    public PlacePlacementCircles()
+    public void PlaceIngredient()
+    {
+    }
+
+    public void PlacePlacementCircles()
     {
     }
 }
