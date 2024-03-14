@@ -1,15 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 
-namespace DefaultNamespace;
-public class Node<Key, Value> where Key : IComparable<Key>
+public class Node
 {
-    public Key Key { get; set; } // IComparable, this is used in the search to compare
-    public Value Value { get; set; } // When inserting numbers, letters etc. both key and value have the same value (the number)
+    public int Node_Key { get; set; }
+
+    public int Node_Value { get; set; } // When inserting numbers, letters etc. both key and value have the same value (the number)
 
     // Children 
-    public Node<Key, Value> Left { get; set; }
-    public Node<Key, Value> Right { get; set; }
+    public Node Left { get; set; }
+    public Node Right { get; set; }
 
     // Number of nodes in the subtree
     public int N { get; set; }
@@ -17,10 +16,10 @@ public class Node<Key, Value> where Key : IComparable<Key>
     // Color of the link from the parent to this node
     public bool Color { get; set; }
 
-    public Node(Key key, Value val, int n, bool color)
+    public Node(int key, int val, int n, bool color)
     {
-        Key = key;
-        Value = val;
+        Node_Key = key;
+        Node_Value = val;
         N = n;
         Color = color;
     }

@@ -1,8 +1,5 @@
-namespace DefaultNamespace;
-
-public interface IRedBlackBST<Key, Value>
+public interface IRedBlackBST
 {
-    public void Put(Key key, Value val);
-
+    public void Put(int key, int val);
     public int Size();
 }

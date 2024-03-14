@@ -1,4 +1,5 @@
-namespace DefaultNamespace;
+using System;
+using System.Collections.Generic;
 
 public class LevelManager : ILevelManager
 {
@@ -16,12 +17,13 @@ public class LevelManager : ILevelManager
     {
     }
 
-    private void LoadProgress()
+    public void LoadProgress()
     {
+        throw new NotImplementedException();
     }
 
-    private void SaveProgress()
+    public void SaveProgress()
     {
+        throw new NotImplementedException();
     }
-    
 }

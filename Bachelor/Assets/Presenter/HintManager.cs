@@ -1,5 +1,4 @@
-
-namespace DefaultNamespace;
+using System.Collections.Generic;
 
 public class HintManager : IHintManager
 {
@@ -7,17 +6,16 @@ public class HintManager : IHintManager
   
   public HintManager()
   {
-      HintsDict.add(AvatartHints.SelectedWrongPlacementForIngredient, "Hmm, you have selected the wrong placement for that ingredient");
-      Hintsdict.add(AvatartHints.SelectedRightPlacementAndInBalance, "Perfect placement! You have selected the right placement for the ingredient and the tree is balanced");
-      Hintsdict.add(AvatartHints.SelectedRightButtonButNeedsToSelectThreeNodes, "You have selected the right placement for the ingredient, but it causes the tree to become unbalanced. You need to select three nodes");
-      Hintsdict.add(AvatartHints.SelectedRightButtonButNeedsToSelectTwoNodes, "You have selected the right placement for the ingredient, but it causes the tree to become unbalanced. You need to select two nodes");
-      Hintsdict.add(AvatartHints.SelectedWrongButton, "You have selected the wrong button. Please try again");
-      Hintsdict.add(AvatartHints.SelectedRightButton, "Good job! You have selected the right button");
-      Hintsdict.add(AvatartHints.RightRotationtButNeedsToSelectThreeNodes, "You have selected the right button, but the tree is still unbalanced. You need to select three nodes");
-      Hintsdict.add(AvatartHints.RightRotationtButNeedsToSelectTwoNodes, "You have selected the right button, but the tree is still unbalanced. You need to select two nodes");
-      Hintsdict.add(AvatartHints.NodeInTheJar, "A subtree has been put in the bag and need to be replaced in the tree");
-      Hintsdict.add(AvatartHints.PotionBrewed, "The potion is finished being brewed");
-      
+      HintsDict.Add(AvatarHint.SelectedWrongPlacementForIngredient, "Hmm, you have selected the wrong placement for that ingredient");
+      HintsDict.Add(AvatarHint.SelectedRightPlacementAndInBalance, "Perfect placement! You have selected the right placement for the ingredient and the tree is balanced");
+      HintsDict.Add(AvatarHint.SelectedRightButtonButNeedsToSelectThreeNodes, "You have selected the right placement for the ingredient, but it causes the tree to become unbalanced. You need to select three nodes");
+      HintsDict.Add(AvatarHint.SelectedRightButtonButNeedsToSelectTwoNodes, "You have selected the right placement for the ingredient, but it causes the tree to become unbalanced. You need to select two nodes");
+      HintsDict.Add(AvatarHint.SelectedWrongButton, "You have selected the wrong button. Please try again");
+      HintsDict.Add(AvatarHint.SelectedRightButton, "Good job! You have selected the right button");
+      HintsDict.Add(AvatarHint.SelectedRightButtonButNeedsToSelectThreeNodes, "You have selected the right button, but the tree is still unbalanced. You need to select three nodes");
+      HintsDict.Add(AvatarHint.SelectedRightButtonButNeedsToSelectTwoNodes, "You have selected the right button, but the tree is still unbalanced. You need to select two nodes");
+      HintsDict.Add(AvatarHint.NodeInTheJar, "A subtree has been put in the bag and need to be replaced in the tree");
+      HintsDict.Add(AvatarHint.PotionBrewed, "The potion is finished being brewed");
   }
 
   public string GetHint(AvatarHint avatarEnum)
@@ -48,7 +46,3 @@ public class HintManager : IHintManager
    //NodeInTheJar,
    //#When the potion is finished being brewed
    //PotionBrewed
- *
- *
- * 
- */

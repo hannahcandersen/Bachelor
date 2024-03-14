@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/*
 public class PotionCrafter : MonoBehaviour, IPointerClickHandler
 {
+    
     RedBlackTree tree;
     public void CraftPot()
     {
@@ -15,4 +17,6 @@ public class PotionCrafter : MonoBehaviour, IPointerClickHandler
     {
         CraftPot();
     }
+    
 }
+*/

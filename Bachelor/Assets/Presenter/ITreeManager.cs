@@ -1,5 +1,3 @@
-namespace DefaultNamespace;
-
 public interface ITreeManager
 {
     public void WaitForRotateRight();

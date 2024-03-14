@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 
-namespace DefaultNamespace;
-public class RedBlackBST<Key, Value> : IRedBlackBST<Key, Value> where Key : IComparable<Key>
+public class RedBlackBST
 {
    private const bool RED = true;
    private const bool BLACK = false;
@@ -13,22 +11,22 @@ public class RedBlackBST<Key, Value> : IRedBlackBST<Key, Value> where Key : ICom
       Root = null;
    }
 
-   public void Put(Key key, Value val)
+   public void Put(int key, int val)
    {
-      root = Put(Root, key, val);
-      root.Color = BLACK;
+      Root = Put(Root, key, val);
+      Root.Color = BLACK;
    }
 
-   private Node Put(Node h, Key key, Value val)
+   private Node Put(Node h, int key, int val)
    {
       // Reached bottom of tree. Insert new node here with red link to parent.
       if (h == null) return new Node(key, val, 1, RED);
 
       // Binary search tree insertion
-      int cmp = key.CompareTo(h.Key);
+      int cmp = key.CompareTo(h.Node_Key);
       if (cmp < 0) h.Left = Put(h.Left, key, val);
       else if (cmp > 0) h.Right = Put(h.Right, key, val);
-      else h.Value = val;
+      else h.Node_Value = val;
 
       // Verify and maintain the red-black tree properties
       if (IsRed(h.Right) && !IsRed(h.Left)) h = RotateLeft(h);

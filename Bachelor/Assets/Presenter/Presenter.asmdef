@@ -1,8 +1,9 @@
 {
-    "name": "Game",
+    "name": "Presenter",
     "rootNamespace": "",
     "references": [
-        "GUID:0926d3e4deaad482787eba8b244282ff"
+        "GUID:69ebfc52a8f9fa44292c7b3c23f43df7",
+        "GUID:a60c08a0f04834f349b22ad0baa2497a"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

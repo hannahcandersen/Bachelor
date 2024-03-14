@@ -1,5 +1,3 @@
-namespace DefaultNamespace;
-
 public interface ILevelManager
 {
     public void LoadLevel(int levelIndex);

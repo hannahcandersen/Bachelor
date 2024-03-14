@@ -1,10 +1,8 @@
-namespace DefaultNamespace;
-
 public class TreeManager : ITreeManager
 {
-    public IRedBlackTree RedBlackTree { get; set; }
+    public IRedBlackBST RedBlackTree { get; set; }
 
-    public TreeManager(IRedBlackTree redBlackTree)
+    public TreeManager(IRedBlackBST redBlackTree)
     {
         RedBlackTree = redBlackTree;
     }

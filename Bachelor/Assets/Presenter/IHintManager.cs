@@ -1,6 +1,4 @@
-namespace DefaultNamespace;
-
 public interface IHintManager
 {
-    public string GetHint(AvatarHints hint); 
+    public string GetHint(AvatarHint hint); 
 }

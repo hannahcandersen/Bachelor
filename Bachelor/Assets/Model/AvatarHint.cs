@@ -1,5 +1,3 @@
-namespace DefaultNamespace;
-
 public enum AvatarHint
 {
     //Selecting a wrong placement for the ingredient:

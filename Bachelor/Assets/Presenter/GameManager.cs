@@ -1,4 +1,4 @@
-namespace DefaultNamespace;
+using System;
 
 public class GameManager : IGameManager
 {
@@ -11,6 +11,7 @@ public class GameManager : IGameManager
 
     public Node GetCurrentIngredient()
     {
+        throw new NotImplementedException();
     }
 
     public void PlaceIngredient()
