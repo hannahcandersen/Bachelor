@@ -2,9 +2,9 @@ using System;
 
 public class Node
 {
-    public int Node_Key { get; set; }
+    public int Key { get; set; }
 
-    public int Node_Value { get; set; } // When inserting numbers, letters etc. both key and value have the same value (the number)
+    public int Value { get; set; } // When inserting numbers, letters etc. both key and value have the same value (the number)
 
     // Children 
     public Node Left { get; set; }
@@ -18,9 +18,9 @@ public class Node
 
     public Node(int key, int val, int n, bool color)
     {
-        Node_Key = key;
-        Node_Value = val;
-        N = n;
+        Key = key;
+        Value = val;
+        N = 1;
         Color = color;
     }
 }

@@ -1,6 +1,6 @@
 using System;
 
-public class RedBlackBST
+public class RedBlackBST : IRedBlackBST
 {
    private const bool RED = true;
    private const bool BLACK = false;
@@ -23,10 +23,10 @@ public class RedBlackBST
       if (h == null) return new Node(key, val, 1, RED);
 
       // Binary search tree insertion
-      int cmp = key.CompareTo(h.Node_Key);
+      int cmp = key.CompareTo(h.Key);
       if (cmp < 0) h.Left = Put(h.Left, key, val);
       else if (cmp > 0) h.Right = Put(h.Right, key, val);
-      else h.Node_Value = val;
+      else h.Value = val;
 
       // Verify and maintain the red-black tree properties
       if (IsRed(h.Right) && !IsRed(h.Left)) h = RotateLeft(h);

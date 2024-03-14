@@ -3,23 +3,18 @@ using NUnit.Framework;
 // Unit tests for the RedBlackBST class
 public class RedBlackBSTTest
 {
-    private RedBlackBST tree;
+    private IRedBlackBST tree;
 
-    // Example setup from chat
+    [SetUp]
     public void SetUp()
     {
         // Initialize RedBlackBST instance
         tree = new RedBlackBST();
 
-        // Initialize Node instances
-        Node firstNode = new Node(1, 1, 1, false);
-        Node secondNode = new Node(2, 2, 1, false);
-        Node thirdNode = new Node(3, 3, 1, false);
-
         // Insert nodes into the RedBlackBST
-        tree.Put(firstNode.Node_Key, firstNode.Node_Value);
-        tree.Put(secondNode.Node_Key, secondNode.Node_Value);
-        tree.Put(thirdNode.Node_Key, thirdNode.Node_Value);
+        tree.Put(1, 1);
+        tree.Put(2,2);
+        tree.Put(3,3);
     }
 
 
