@@ -1,16 +1,23 @@
 namespace DefaultNamespace;
 
-public class GameManager
+public class GameManager : IGameManager
 {
-    public getCurrentIngredient()
+    public ILevelData LevelData { get; set; } // Info on the current level
+
+    public GameManager(ILevelData levelData)
+    {
+        LevelData = levelData;
+    }
+
+    public GetCurrentIngredient()
     {
     }
 
-    public placeIngredient()
+    public PlaceIngredient()
     {
     }
 
-    public placePlacementCircles()
+    public PlacePlacementCircles()
     {
     }
 }

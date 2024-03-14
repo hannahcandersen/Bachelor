@@ -2,8 +2,8 @@ namespace DefaultNamespace;
 
 public interface ILevelManager
 {
-public void LoadLevel(int levelIndex)
-public void CompleteLevel(int levelIndex)
-private void LoadProgress()
-private void SaveProgress()
+    public void LoadLevel(int levelIndex);
+    public void CompleteLevel(int levelIndex);
+    public void LoadProgress();
+    public void SaveProgress();
 }

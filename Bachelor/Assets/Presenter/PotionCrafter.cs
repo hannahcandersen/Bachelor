@@ -1,23 +1,18 @@
-public class TreeManager : ITreeManager
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+
+public class PotionCrafter : MonoBehaviour, IPointerClickHandler
 {
-    private IRedBlackTree _tree;
-    public TreeManager(IRedBlackTree tree)
+    RedBlackTree tree;
+    public void CraftPot()
     {
-        _tree = tree;
+        tree.GetNode();
     }
 
-    waitForUserToGiveRotateRightAction()
+    public void OnPointerClick(PointerEventData eventData)
     {
-    }
-
-    waitForUserToGiveRotateLeftAction()
-    {
-    }
-
-    waitForUserToGiveFlipColorAction()
-    {
-    }
-
-    updateCurrentHint(){
+        CraftPot();
     }
 }

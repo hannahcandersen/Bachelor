@@ -1,35 +1,8 @@
 namespace DefaultNamespace;
 
-public interface IredBlackBST
+public interface IRedBlackBST<Key, Value>
 {
-public void put(Key key, Value val)
-{  
-}
-private Node put(Node h, Key key, Value val)
-{
-}
-  
-private Node rotateLeft(Node h) 
-{
-}
-  
-private boolean isRed(Node x)
-{
-}
-  
-private Node rotateRight(Node h) 
-{
-}
-private void flipColors(Node h)
-{
-}
+    public void Put(Key key, Value val);
 
-private int size()
-{
-
-}
-
-
-}
-
+    public int Size();
 }

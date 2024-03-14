@@ -1,9 +1,12 @@
 namespace DefaultNamespace;
 
-public class LevelManager
+public class LevelManager : ILevelManager
 {
-    public LevelData levelData
-    public LevelData[] levels;
+    public List<ILevelData> Levels { get; set; } = new List<ILevelData>();
+
+    public LevelManager()
+    {
+    }
 
     public void LoadLevel(int levelIndex)
     {

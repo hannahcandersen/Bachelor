@@ -1,20 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
-public class Node 
+namespace DefaultNamespace;
+public class Node<Key, Value> where Key : IComparable<Key>
 {
-    Key key;
-    Value val;
-    Node left, right;
-    int N;
-    bool color;
+    public Key Key { get; set; } // IComparable, this is used in the search to compare
+    public Value Value { get; set; } // When inserting numbers, letters etc. both key and value have the same value (the number)
 
-    Node(Key key, Value val, int N, boolean color)
+    // Children 
+    public Node<Key, Value> Left { get; set; }
+    public Node<Key, Value> Right { get; set; }
+
+    // Number of nodes in the subtree
+    public int N { get; set; }
+
+    // Color of the link from the parent to this node
+    public bool Color { get; set; }
+
+    public Node(Key key, Value val, int n, bool color)
     {
-        this.key = key;
-        this.val = val;
-        this.N = N;
-        this.color = color;
+        Key = key;
+        Value = val;
+        N = n;
+        Color = color;
     }
 }
